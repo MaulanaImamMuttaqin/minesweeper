@@ -1,0 +1,115 @@
+:root{
+    --darker:rgb(131, 130, 130);
+    --lighter :rgb(238, 238, 238);
+}
+* {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: Verdana, sans-serif;
+}
+.container{
+    height: 40vw;
+    width: 70vw;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(179, 179, 179);
+    padding:0.5%;
+    border:5px solid;
+    border-top-color: white;
+    border-left-color: white;
+    border-right-color: var(--darker);
+    border-bottom-color: var(--darker);
+}
+.controller{
+    width:100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0.5%;
+    margin-bottom: 1%;
+}
+.far{
+    color:white;
+    font-size: 2vw;
+}
+.border{
+    border:5px solid;
+    border-top-color: var(--darker);
+    border-left-color: var(--darker);
+    border-right-color: var(--lighter);
+    border-bottom-color: var(--lighter);
+}
+
+.game{
+    width:100%;
+    height: 88%;
+}
+.controller > div{
+    border:1px solid;
+    height: 100%;
+    width: 7%;
+    margin: 0;
+}
+#reset{
+    width: 4%;
+    text-align: center;
+    border:none;
+}
+.box {
+    width:2.22%;
+    height:4.55%;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.3vw;
+    border:3.5px solid;
+    line-height: 1.5vw;
+    border-top-color: var(--lighter);
+    border-left-color: var(--lighter);
+    border-right-color: var(--darker);
+    border-bottom-color: var(--darker);
+    display: inline-block;
+    float:left;
+}
+.box:hover{
+    background-color: rgb(163, 163, 163);
+}
+.box:active{
+    border:1px solid var(--darker);
+}
+.box-pressed{
+    border:1px solid var(--darker);
+}
+.isBomb{
+    background-color: red;
+}
+
+.bomb_1{
+    color:blue;
+}
+.bomb_2{
+    color: green;
+}
+.bomb_3{
+    color: red;
+}
+.bomb_4{
+    color: purple
+}
+.bomb_5{
+    color: #800000
+}
+
+.bomb_6{
+    color: turquoise;
+}
+.bomb_7{
+    color: black
+}
+.bomb_8{
+    color: gray;
+}
