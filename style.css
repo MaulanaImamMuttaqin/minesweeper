@@ -2,6 +2,10 @@
     --darker:rgb(131, 130, 130);
     --lighter :rgb(238, 238, 238);
 }
+@font-face{
+    font-family: digital;
+    src: url("./font/digital-7.regular.woff");
+}
 * {
     box-sizing: border-box;
 }
@@ -10,8 +14,8 @@ body{
     font-family: Verdana, sans-serif;
 }
 .container{
-    height: 40vw;
-    width: 70vw;
+    height: 40vmax;
+    width: 70vmax;
     position: absolute;
     top:50%;
     left: 50%;
@@ -33,10 +37,7 @@ body{
     padding:0.5%;
     margin-bottom: 1%;
 }
-.far{
-    color:white;
-    font-size: 2vw;
-}
+
 .border{
     border:5px solid;
     border-top-color: var(--darker);
@@ -55,11 +56,29 @@ body{
     width: 7%;
     margin: 0;
 }
+#mine, #timer{
+    background-color: black;
+    font-family: digital;
+    font-size: 2.4vw;
+    color:red;
+    font-weight: bold;
+    text-align: center;
+    width:7%;
+    line-height: 100%;
+    padding: 0 1vw;
+}
 #reset{
     width: 4%;
     text-align: center;
-    border:none;
+    line-height: 1.5vw;
+    border:3px solid;
+    border-top-color: var(--darker);
+    border-left-color: var(--darker);
+    border-right-color: var(--lighter);
+    border-bottom-color: var(--lighter);
+    background-size: cover;
 }
+
 .box {
     width:2.22%;
     height:4.55%;
@@ -74,11 +93,13 @@ body{
     border-bottom-color: var(--darker);
     display: inline-block;
     float:left;
+    background-color: none;
+    background-size: cover;
 }
-.box:hover{
+.box:hover, #reset:hover{
     background-color: rgb(163, 163, 163);
 }
-.box:active{
+.box:active, #reset:active{
     border:1px solid var(--darker);
 }
 .box-pressed{
@@ -112,4 +133,23 @@ body{
 }
 .bomb_8{
     color: gray;
+}
+.flag{
+    background-image: url("./icons/flag.ico");
+}
+.bombEnd{
+    background-image: url("./icons/mine.ico");
+}
+.bombEndClicked{
+    background-image: url("./icons/mine.ico");
+    background-color: rgb(221, 67, 67);
+}
+.smiley{
+    background-image: url("./icons/smiley1.ico");
+}
+.hushed{
+    background-image: url("./icons/smiley2.ico");
+}
+.sad{
+    background-image: url("./icons/smiley3.ico");
 }
