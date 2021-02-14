@@ -202,4 +202,4 @@ function MineSweeper(NumBomb, NumRow, NumCol){
     resetButton.addEventListener("click", ()=> reset())
 }
 // MineSweeper(Jumlah Bomb, Jumlah Baris, Jumlah Kolom)
-MineSweeper(10, 22, 45)
+MineSweeper(100, 22, 45)
