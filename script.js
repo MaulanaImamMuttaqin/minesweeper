@@ -128,24 +128,29 @@ function MineSweeper(NumBomb, NumRow, NumCol){
             }
             else if(bomb.includes(e.target.id)){
                 gameOver = true
+                clearInterval(setTime)
                 revealAllBomb(e.target.id);
                 resetButton.classList.remove('hushed')
                 resetButton.classList.add('sad')   
             }else{
                 let [baris, kolom] = parseRowCol(e.target.id)
                 let bomb_count = checkBombNumb(baris, kolom)
+                let box_pressed = document.querySelectorAll(".box-pressed").length
                 startTime()
                 //cetak jumlah bomb ke box
 
                 if(bomb_count !== 0){
                     clickedBox.innerHTML = bomb_count
                     clickedBox.classList.add(`bomb_${bomb_count}`)
+                    if((box_pressed + NumBomb) === (NumRow*NumCol)){
+                        alert("menang")
+                    }
                 }else{
                     console.time("js biasa")
                     checkSurroundBombNum(baris, kolom)
                     console.timeEnd("js biasa")
                 }
-
+                
                 //ubah expresi emoji ke senyum kalo berhasil
                 resetButton.classList.remove('hushed')
                 resetButton.classList.add('smiley')
